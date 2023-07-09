@@ -1,27 +1,33 @@
 const express = require('express');
-const path = require('path')
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 8000;
 
-// public static path
-const static_Path = path.join(__dirname, '../public')
+// Public static path
+const publicPath = path.join(__dirname, '../public');
+const viewsPath = path.join(__dirname, '../views');
 
-app.use(express.static(static_Path))
+app.set('view engine', 'hbs');
+app.set('views', viewsPath);
 
-console.log(path.join())
+app.use(express.static(publicPath));
+
 app.get('/', (req, res) => {
-    res.send('Welcome to my empire')
-})
+    res.render('index');
+});
+
 app.get('/about', (req, res) => {
-    res.send('here u got all the knowledge about my empire')
-})
+    res.render('about');
+});
+
 app.get('/weather', (req, res) => {
-    res.send('get information related to weather of my empire')
-})
+    res.send('Get information related to the weather of my empire');
+});
+
 app.get('*', (req, res) => {
-    res.send('404 error page')
-})
+    res.render('404error');
+});
 
 app.listen(port, () => {
-    console.log('listening to the port 8000')
-})
+    console.log('Listening on port 8000');
+});
