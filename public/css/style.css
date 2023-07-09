@@ -113,6 +113,12 @@ navbar-toggler-icon {
     box-shadow: 0 8px 6px -6px var(--main-color);
 }
 
+/* error page style */
+.errorImg img{
+width: 60rem;
+height: 40rem;
+}
+
 /* footer style */
 
 footer {
