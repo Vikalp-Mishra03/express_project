@@ -16,6 +16,13 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
 .main_menu {
     background-color: var(--main-bg);
 }
@@ -40,8 +47,8 @@ html {
     margin-left: 2rem;
 }
 
-.navbar-toggler {
-    background-color: grey;
+navbar-toggler-icon {
+    color: gray;
 }
 
 .fa-snowflake {
@@ -102,6 +109,39 @@ html {
     outline: none;
 }
 
-.main_header_left button:hover{
+.main_header_left button:hover {
     box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+/* footer style */
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/* responsive code */
+@media (max-width: 768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
 }
