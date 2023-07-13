@@ -192,7 +192,7 @@ navbar-toggler-icon {
 
 .main_layer .middle_layer p,
 .main_layer .middle_layer .fa {
-    font-size: 7rem;
+    font-size: 4.1rem;
     font-weight: 900;
 }
 
@@ -217,12 +217,14 @@ sup {
     bottom: 5px;
     border: none;
     background: #0097e6;
+    /* visibility: visible; */
     padding: 0 3rem;
     border-radius: 3rem;
     color: white;
     font-size: 1.6rem;
 }
-.temp_form input[type="submit"]:hover{
+
+.temp_form input[type="submit"]:hover {
     color: #0097e6;
     background-color: #fff;
 }
@@ -257,5 +259,15 @@ footer p {
     .main_header_right {
         height: auto;
         margin-top: 3rem;
+    }
+
+    .temp_form {
+        position: relative;
+        margin: 5rem 0rem 6rem 15rem;
+    }
+    .temp_form input[type="submit"] {
+        position: absolute;
+        top: 5px;
+        left: 280px;
     }
 }
